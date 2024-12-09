@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --primary-color: #9C7D9F;
+    --secundary-color: #72177A;
+    --tertiary-color: #F97909;
+    --quaternary-color: #17D6DD;
+    --text-color: #000000;
+    /* --background: linear-gradient(
+        150deg,
+        rgba(156, 125, 159, 1) 0%,
+        rgba(114, 23, 122, 0.8) 50%,
+        rgba(249, 121, 9, 0.6) 75%,
+        rgba(23, 214, 221, 0.5) 100%
+    ); */
+--background: linear-gradient(4.51deg, rgba(114, 23, 122, 0.6) 24.54%, rgba(249, 121, 9, 0.3) 45.43%, rgba(23, 214, 221, 0.5) 66.32%, #9C7D9F 94.52%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Lora', Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+i {
+    color: var(--secundary-color);
+}
+
+h1{
+    font-size: 1.7rem;
+}
+h3{
+    font-size: 1.3rem;
+}
+h6 {
+    font-size: 0.7rem;
+}
+.header__brand {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.header__brand .brand__logo {
+    width: 4rem;
+    height: auto;
+}
+
+.brand__name-and-function {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#toggleTheme {
+    font-size: 1rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: var(--tertiary-color);
+}
+
+.menu__item{
+    width: 100%;
+}
+.menu--mobile{
+    justify-content: space-between;
+    border-top: 1px solid var(--secundary-color);
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu--mobile .menu__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    padding: .2rem 1rem;
+}
+
+.menu__link.active .menu__icon, 
+.menu__link.active .menu__text {
+    color: var(--secundary-color);
+    font-weight: 700;
+}
+
+.menu__icon, .menu__text {
+    color: var(--text-color);
+}
+
+.menu__icon {
+    font-size: 1.3rem;
+}
+
+.menu__text {
+    font-size: .6rem;
+}
+
+
+@media (min-width:768px) {
+    .menu--mobile {
+        display: none;
+    }
+}

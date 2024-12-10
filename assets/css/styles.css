@@ -1,20 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-:root {
+:root, :root[data-theme='clean'] {
     --primary-color: #9C7D9F;
     --secundary-color: #72177A;
     --tertiary-color: #F97909;
     --quaternary-color: #17D6DD;
-    --text-color: #000000;
-    /* --background: linear-gradient(
-        150deg,
-        rgba(156, 125, 159, 1) 0%,
-        rgba(114, 23, 122, 0.8) 50%,
-        rgba(249, 121, 9, 0.6) 75%,
-        rgba(23, 214, 221, 0.5) 100%
-    ); */
---background: linear-gradient(4.51deg, rgba(114, 23, 122, 0.6) 24.54%, rgba(249, 121, 9, 0.3) 45.43%, rgba(23, 214, 221, 0.5) 66.32%, #9C7D9F 94.52%);
+    --text-color: #131212;
+    --background: linear-gradient(4.51deg,
+    #72177a99 24.54%, 
+    #f979094d 45.43%, 
+    #17d6dd80 66.32%, 
+    #9C7D9F 94.52%);
+}
 
+:root, :root[data-theme='dark'] {
+    --primary-color: #9C7D9F;
+    --secundary-color: #72177A;
+    --tertiary-color: #F97909;
+    --quaternary-color: #17D6DD;
+    --text-color: #e6dfdf;
+    --background: linear-gradient(175deg, 
+    #0c0c0b 10%, 
+    #1a0b1f 15%, 
+    #0c0c0b 40%, 
+    #000000 90%);
+
+}
+
+html[data-theme='dark'] #toggleTheme {
+    color: var(--text-color);
 }
 
 * {
@@ -35,8 +49,13 @@ a {
     text-transform: uppercase;
 }
 
+a:hover {
+    color: var(--quaternary-color);
+    font-weight: 800;
+}
+
 i {
-    color: var(--secundary-color);
+    color: var(--text-color);
 }
 
 h1{
@@ -48,13 +67,26 @@ h3{
 h6 {
     font-size: 0.7rem;
 }
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    width: 100%;
+    border-bottom: 1px solid var(--secundary-color);
+}
+
 .header__brand {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    flex-direction: row;
     width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__toggle {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .header__brand .brand__logo {
@@ -66,10 +98,21 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--text-color);
+}
+
+.brand__name {
+    letter-spacing: .02rem;
+}
+
+.brand__function {
+    letter-spacing: .02rem;
 }
 
 #toggleTheme {
     font-size: 1rem;
+    cursor: pointer;
+    transition: ease-in-out .4s;
 }
 
 .menu {
@@ -98,8 +141,11 @@ h6 {
     padding: .2rem 1rem;
 }
 
-.menu__link.active .menu__icon, 
-.menu__link.active .menu__text {
+.menu__link.active .menu__icon,
+.menu__link.active .menu__text,
+.menu__link:hover .menu__icon,
+.menu__link:hover .menu__text
+ {
     color: var(--secundary-color);
     font-weight: 700;
 }
@@ -116,9 +162,83 @@ h6 {
     font-size: .6rem;
 }
 
+.menu--desktop {
+    gap: 1rem;
+    background-color: transparent;
+}
+
+.header__nav--desktop {
+    display: none;
+}
+
+
+
+main {
+    padding: 5rem 1rem 2rem 1rem;
+}
+
+footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+
 
 @media (min-width:768px) {
-    .menu--mobile {
+    .nav--mobile {
         display: none;
     }
+
+    .header__nav--desktop {
+        display: flex;
+    }
+
+    .menu--desktop span {
+        font-size: 1rem;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed; 
+        background-color: var(--tertiary-color);
+        padding: 1rem 4rem;
+    }
+
+    .header__brand .brand__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .brand__name-and-function {
+        margin-left: auto;
+        margin-right: 1.5rem;
+    }
+
+    .brand__name{
+        font-size: 1rem;
+    }
+
+    .brand__function {
+        font-size: .75rem;
+    }
+
+    .header__toggle {
+        margin-left: 0;
+        align-items: center;
+    }
 }
+
+
+@media (min-width: 1400px){
+    .header {
+        padding: 1rem 8rem;
+    }
+}
+    
+

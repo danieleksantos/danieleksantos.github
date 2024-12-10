@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,52 @@
     <meta name="description" content="Portifólio da desenvolvedora para compartilhar projetos e habilidades dessenvolvidos">
     <link rel="shortcut icon" href="/danieleksantos.github.io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/danieleksantos.github.io/assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     
 </head>
 
 <body>
     <header class="header">
+        <nav class="header__nav--desktop">
+            <ul class="menu menu--desktop">
+                <li class="menu__item">
+                    <a class="menu__link active" href="#home">
+                        <span class="menu__text">Home</span>
+                    </a>
+                </li>
+    
+                <li class="menu__item">
+                    <a class="menu__link" href="#projects">
+                        <span class="menu__text">Projetos</span>
+                    </a>
+                </li>
+    
+                <li class="menu__item">
+                    <a class="menu__link" href="#about">
+                        <span class="menu__text">Sobre</span>
+                    </a>
+                </li>
+    
+                <li class="menu__item">
+                    <a class="menu__link" href="#contact">
+                        <span class="menu__text">Contato</span>
+                    </a>
+                </li>
+            </ul>
+        </nav> 
+
         <div class="header__brand">
             <img class="brand__logo" src="assets/images/logo-sem-fundo.png" alt="Logo DKS">
             <div class="brand__name-and-function">
                 <h5 class="brand__name">Daniele Karina dos Santos</h5>
                 <h6 class="brand__function">Desenvolvedora Front-End</h6>
             </div>
-            <i id="toggleTheme" class="bi bi-brightness-high"></i>
+            <div class="header__toggle">
+                <i id="toggleTheme" class="bi bi-sun"></i>
+            </div>
         </div>
     </header>
-    <nav>
+    <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
                 <a class="menu__link active" href="#home">
@@ -54,6 +84,38 @@
                 </a>
             </li>
         </ul>
-    </nav>    
+    </nav> 
+    
+
+    <main>
+
+        <h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et dolor non urna tincidunt fermentum.
+         Sed auctor,
+         erat quis efficitur dapibus, nunc enim pellentesque eros, vitae gravida elit purus eget neque. Praesent vestibulum
+          nisi nec sapien hendrerit fringilla.</p>
+        <h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis temporibus non. Debitis libero ut
+             suscipit consequuntur. Ex molestias quidem quibusdam nam repellat doloremque totam magnam, atque voluptatibus 
+             enim voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis aperiam itaque
+              alias, animi, mollitia neque accusantium repellendus eveniet recusandae aliquam? Corporis dolore incidunt 
+              quisquam ea saepe aspernatur doloribus et! Lorem, ipsum dolor sit amet consectetur 
+            adipisicing elit. Expedita aliquid laboriosam reprehenderit tempore fuga, natus minus delectus possimus quae
+             atque,
+             nam eaque accusantium. Quibusdam expedita esse quidem quas earum veniam! Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Quaerat magnam maiores animi repudiandae iure velit excepturi, sit beatae 
+              consequatur cum perspiciatis sapiente placeat natus, illum in explicabo error! Earum, natus?</p>
+
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, animi dolore exercitationem aperiam quaerat et ex 
+              similique velit accusamus repudiandae adipisci cupiditate omnis perspiciatis, enim ullam, nesciunt repellendus 
+              quisquam id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quas saepe distinctio veniam? Quae fugiat 
+              totam minus non adipisci sapiente cupiditate consequuntur autem voluptatibus illum, minima, dolores quasi sint
+               officiis.
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024. Todos os direitos reservados. Daniele Karina dos Santos. Desenvolvido por <a href="https://github.com/danieleksantos">DKS</a></p>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>  

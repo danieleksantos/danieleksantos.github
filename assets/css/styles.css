@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 
 :root, :root[data-theme='clean'] {
     --primary-color: #9C7D9F;
@@ -19,11 +21,11 @@
     --tertiary-color: #F97909;
     --quaternary-color: #17D6DD;
     --text-color: #e6dfdf;
-    --background: linear-gradient(175deg, 
-    #0c0c0b 10%, 
-    #1a0b1f 15%, 
-    #0c0c0b 40%, 
-    #000000 90%);
+    --background: linear-gradient(145deg, 
+    #0c0c0b 25%, 
+    #1a0b1f 35%, 
+    #0c0c0b 50%, 
+    #000000 65%);
 
 }
 
@@ -58,15 +60,45 @@ i {
     color: var(--text-color);
 }
 
-h1{
-    font-size: 1.7rem;
+
+h1, h2, h3{
+    font-family: 'Merriweather', Cambria, Cochin, Times, 'Times New Roman', serif;
+    color: var(--text-color);
+    text-transform: uppercase;
 }
+
+h1 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+}
+
 h3{
     font-size: 1.3rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+h4{
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+h5 {
+    font-size: .9rem;
+    color: var(--text-color);
 }
 h6 {
     font-size: 0.7rem;
 }
+
+p {
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -145,7 +177,7 @@ h6 {
 .menu__link.active .menu__text,
 .menu__link:hover .menu__icon,
 .menu__link:hover .menu__text
- {
+{
     color: var(--secundary-color);
     font-weight: 700;
 }
@@ -174,15 +206,141 @@ h6 {
 
 
 main {
-    padding: 5rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4.5rem 1rem 1rem 1rem;
 }
 
-footer {
-    padding: 2rem;
+.main__content1 {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem;
+}
+.connect{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.btn {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    background-color: transparent;
+    border-radius: .8rem;
+    border: 1px solid var(--secundary-color);
+    padding: .8rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-family: 'Lora', Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn-projects {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.main__content2 {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
+.main__content2 img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: .8rem;
+}
 
+.differential {
+    padding: .5rem;
+    background-color: var(--secundary-color);
+    border-radius: .8rem;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+}
+
+.technologies {
+    padding: 1.5rem 1rem 1rem 1rem;
+    background-color: var(--secundary-color);
+    margin: 1rem 0rem;
+}
+.technologies__list {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact__link:hover .contact__text, 
+.contact__link:hover .contact__icon
+{
+    color: var(--quaternary-color);
+    font-weight: 700;
+}
+
+.contact__links {
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.contact__icon {
+    padding: 0rem .4rem;
+}
+
+.contact__text {
+    color: var(--text-color);
+    text-transform: none
+}
+
+.btn-email {
+    text-transform: none;
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--secundary-color);
+}
+
+
+
+
+
+
+footer p {
+    padding: 2rem 2rem 4rem 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
 
 
 
@@ -232,6 +390,18 @@ footer {
         margin-left: 0;
         align-items: center;
     }
+
+    .main__content1 {
+        padding: 5rem 6rem 2rem 6rem;
+    }
+
+    .main__content2 {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        padding: 1rem;
+    }
+
 }
 
 

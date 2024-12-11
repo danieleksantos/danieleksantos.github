@@ -97,6 +97,7 @@ p {
     padding: 1rem;
     text-align: center;
     color: var(--text-color);
+    font-size: .75rem;
 }
 
 .header {
@@ -241,6 +242,13 @@ main {
     color: var(--text-color);
     text-transform: uppercase;
     font-family: 'Lora', Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .3s;
 }
 
 .btn-projects {
@@ -262,7 +270,7 @@ main {
 
 .differential {
     padding: .5rem;
-    background-color: var(--secundary-color);
+    border: 1px solid var(--tertiary-color);
     border-radius: .8rem;
     display: flex;
     justify-content: center;
@@ -280,7 +288,7 @@ main {
     flex-direction: row wrap;
     justify-content: center;
     gap: 1rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-top: 1rem;
 }
 
@@ -291,6 +299,7 @@ main {
     gap: 1rem;
     color: var(--text-color);
     text-align: center;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
 .contact {
@@ -337,7 +346,7 @@ main {
 
 
 footer p {
-    padding: 2rem 2rem 4rem 2rem;
+    padding: 2rem 2rem 4rem;
     text-align: center;
     color: var(--text-color);
 }
@@ -402,12 +411,92 @@ footer p {
         padding: 1rem;
     }
 
+    .technologies__list {
+        font-size: 2.5.rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .contact {
+        padding: 1rem 2.5rem;
+    }
+
+    footer p{
+        padding: 1rem;
+        font-size: .75rem;
+    }
 }
 
+@media (min-width: 1200px){
+   
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    h3{
+        font-size: 1.4rem;
+    }
+    
+    h4{
+        font-size: 1.2rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+    }
+    
+    h6 {
+        font-size: .8rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .projects__qualities {
+        font-size: 1.2rem;
+    }
+}
 
 @media (min-width: 1400px){
     .header {
         padding: 1rem 8rem;
+    }
+
+    main {
+        padding:5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+       
+    }
+    
+    h3{
+        font-size: 1.6rem;
+    }
+    
+    h4{
+        font-size: 1.4rem;
+    }
+    
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    .projects__qualities {
+        font-size: 1.4rem;
     }
 }
     

@@ -4,8 +4,8 @@
 
 :root, :root[data-theme='clean'] {
     --primary-color: #9C7D9F;
-    --secundary-color: #72177A;
-    --tertiary-color: #F97909;
+    --secundary-color: #F97909;
+    --tertiary-color: #72177A;
     --quaternary-color: #17D6DD;
     --text-color: #131212;
     --background: linear-gradient(4.51deg,
@@ -17,8 +17,8 @@
 
 :root, :root[data-theme='dark'] {
     --primary-color: #9C7D9F;
-    --secundary-color: #72177A;
-    --tertiary-color: #F97909;
+    --secundary-color: #d1680d;
+    --tertiary-color: #72177A;
     --quaternary-color: #17D6DD;
     --text-color: #e6dfdf;
     --background: linear-gradient(145deg, 
@@ -56,7 +56,7 @@ a:hover {
     font-weight: 800;
 }
 
-i {
+i, span {
     color: var(--text-color);
 }
 
@@ -71,6 +71,7 @@ h1 {
     font-size: 1.7rem;
     display: flex;
     justify-content: center;
+    text-align: justify;
 }
 
 h3{
@@ -82,7 +83,6 @@ h3{
 h4{
     font-size: 1.1rem;
     color: var(--text-color);
-    text-align: center;
 }
 
 h5 {
@@ -91,6 +91,7 @@ h5 {
 }
 h6 {
     font-size: 0.7rem;
+    color: var(--text-color);
 }
 
 p {
@@ -152,6 +153,8 @@ p {
     display: flex;
     align-items: center;
     background-color: var(--tertiary-color);
+    letter-spacing: .1rem;
+
 }
 
 .menu__item{
@@ -179,7 +182,7 @@ p {
 .menu__link:hover .menu__icon,
 .menu__link:hover .menu__text
 {
-    color: var(--secundary-color);
+    color: var(--quaternary-color);
     font-weight: 700;
 }
 
@@ -193,6 +196,8 @@ p {
 
 .menu__text {
     font-size: .6rem;
+    font-weight: 600;
+
 }
 
 .menu--desktop {
@@ -204,13 +209,14 @@ p {
     display: none;
 }
 
-
+main, .projects {
+    padding: 4.5rem 1rem 1rem 1rem;
+}
 
 main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 4.5rem 1rem 1rem 1rem;
 }
 
 .main__content1 {
@@ -244,11 +250,13 @@ main {
     font-family: 'Lora', Cochin, Georgia, Times, 'Times New Roman', serif;
     transition: ease-in-out .3s;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .btn:hover {
     transform: scale(1.05);
     transition: ease-in-out .3s;
+    color: var(--quaternary-color);
 }
 
 .btn-projects {
@@ -283,6 +291,11 @@ main {
     background-color: var(--secundary-color);
     margin: 1rem 0rem;
 }
+
+.technologies h4 {
+    text-align: center;
+}
+
 .technologies__list {
     display: flex;
     flex-direction: row wrap;
@@ -291,7 +304,6 @@ main {
     font-size: 2rem;
     padding-top: 1rem;
 }
-
 
 .projects {
     display: flex;
@@ -302,6 +314,40 @@ main {
     padding: 1rem 1rem 2rem 1rem;
 }
 
+.projects__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.card__cover {
+    width: 20rem;
+    height: auto;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.card__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+.btn-full-project, .btn-repository {
+    background-color: var(--tertiary-color);
+}
+
+.btn-all-projects {
+    width: calc(100% - 14rem);
+    background-color: var(--secundary-color);
+    font-size: 1rem;
+    border: 1px solid var(--tertiary-color);
+    margin: 1rem 7rem;
+}
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -310,11 +356,122 @@ main {
     gap: 1rem;
 }
 
+.about__content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__photo {
+    width: 18rem;
+    height: auto;
+    border-radius: 2rem;
+    margin: 1.5rem 1rem 1rem;
+}
+
+.about__text {
+    text-align: justify;
+    padding: 1.5rem 2rem 2rem;
+}
+
+.formation__title, .courses__title {
+    padding: 1rem;
+}
+
+.formation__title {
+    padding: .05rem;
+}
+
+.formation {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-left: 2rem;
+}
+
+.formation h4 {
+    padding-top: 1.5rem;
+    padding-bottom: .2rem;
+}
+
+.courses {
+padding: 2rem;
+}
+
+.accordion__header {
+    display: flex;
+    padding: .75rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    border: 1px solid var(--secundary-color);
+    border-radius: .5rem .5rem 0rem 0rem;
+    cursor: pointer;
+}
+
+.accordion__header:hover span{
+    font-weight: 700;
+}
+
+.accordion__header span {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.accordion__header.start {
+    border-radius: 0.25rem .25rem 0rem 0rem;
+}
+
+.accordion__header.end,
+.accordion__item.active  .accordion__body.end{
+    border-radius: 0rem 0rem .25rem .25rem;
+}
+
+.accordion__item.active .accordion__header.end {
+    border-radius: 0;
+}
+
+.accordion__body {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .1rem .2rem;
+    gap: .2;
+    border: 1px solid var(--secundary-color);
+}
+
+.accordion__body p {
+    font-size: .9rem;
+    text-align: justify;
+    padding: .3rem;
+}
+
+
+.accordion__item.active .accordion__header {
+    background-color: var(--tertiary-color);
+}
+
+.accordion__item.active .accordion__body {
+    display: flex;
+}
+
+.accordion__item.active .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
+
 .contact__link:hover .contact__text, 
 .contact__link:hover .contact__icon
 {
     color: var(--quaternary-color);
     font-weight: 700;
+}
+
+.contact {
+    border-top: 1px solid var(--secundary-color);
+}
+
+.contact__title {
+    padding: 2rem 1rem .1rem;
 }
 
 .contact__links {
@@ -334,11 +491,19 @@ main {
     text-transform: none
 }
 
+.contact p {
+    padding: .3rem 2rem;
+    text-align: justify;
+    font-size: .9rem;
+}
+
 .btn-email {
     text-transform: none;
     background-color: var(--tertiary-color);
     border: 1px solid var(--secundary-color);
 }
+
+
 
 
 
@@ -363,7 +528,7 @@ footer p {
     }
 
     .menu--desktop span {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     .header {
@@ -389,10 +554,12 @@ footer p {
 
     .brand__name{
         font-size: 1rem;
+        letter-spacing: .1rem;
     }
 
     .brand__function {
         font-size: .75rem;
+        letter-spacing: .1rem;
     }
 
     .header__toggle {
@@ -411,12 +578,82 @@ footer p {
         padding: 1rem;
     }
 
-    .technologies__list {
+    .projects__card .technologies__list {
         font-size: 2.5.rem;
+        justify-content: left;
     }
 
     p {
         font-size: 1rem;
+    }
+
+    .projects__container {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+
+    .projects__container-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .projects__card {
+        padding: 1.5rem .5rem;
+        text-align: left;
+    }
+
+    .card__cover {
+        width: 55%;
+        object-fit: cover;
+    }
+
+    .card__description {
+        text-align: left;
+    }
+
+    .technologies__list {
+        text-align: left;
+    }
+
+    .card__buttons {
+        gap: .5rem;
+        padding: .3rem;
+    }
+
+    .btn-full-project, .btn-repository {
+        padding: .6rem;
+        gap: 1rem;
+    }
+
+    .about__content1 {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .about__content2{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .courses {
+        padding: .2rem 2rem .2rem .2rem;
+        width: 50%;
+    }
+
+    .courses__title {
+        padding: 0rem 1rem .8rem;
+    }
+    .formation {
+        width: 55%;
+    }
+
+    .formation__title {
+        text-align: left;
     }
 
     .contact {
@@ -432,32 +669,86 @@ footer p {
 @media (min-width: 1200px){
    
     h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         text-align: center;
     }
     
     h3{
-        font-size: 1.4rem;
+        font-size: 1.7rem;
     }
     
     h4{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     
     h5 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     h6 {
-        font-size: .8rem;
+        font-size: 1rem;
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .projects__qualities {
         font-size: 1.2rem;
+    }
+
+    .projects__container{
+        padding: 1rem 4rem;
+    }
+
+    .projects__card {
+        padding: 1rem 2rem;
+    }
+    
+
+    .card__cover {
+        width: 45%;
+        height: auto;
+    }
+    .card__buttons {
+        gap: 2rem;
+        padding: 1%rem;
+    }
+
+    .card__hability {
+        font-size: 1.2rem;
+    }
+
+    .btn-full-project, .btn-repository, .btn-repository, .btn-full-project {
+        padding: .6rem;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .contact__item {
+        font-size: 1.2rem;
+    }
+    .btn-email {
+        font-size: 1.3rem;
+    }
+
+    .about__content1 {
+        padding: .5rem 2rem 2rem;
+    }
+    .about__photo {
+        margin: 1rem 4rem 1rem 5rem ;
+    }
+
+    .about__content2 {
+        margin: 0rem 2rem;
+    }
+
+    .about__text {
+        padding: 2rem 5rem 2rem 2rem;
+    }
+
+    footer p {
+        font-size: 1rem;
     }
 }
 
@@ -467,7 +758,7 @@ footer p {
     }
 
     main {
-        padding:5rem;
+        padding:5rem 5rem 2rem 5rem;
     }
 
     h1 {
@@ -497,6 +788,24 @@ footer p {
 
     .projects__qualities {
         font-size: 1.4rem;
+    }
+
+    .projects__container{
+        padding: 1rem 4rem;
+    }
+
+    .about__content2 {
+        margin: 2rem 12rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+        text-align: center;
+        padding: .2rem 10rem;
+    }
+
+    #contact{
+        gap: 1.5rem;
     }
 }
     
